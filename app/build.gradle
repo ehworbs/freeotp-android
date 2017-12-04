@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 
 dependencies {
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.google.zxing:core:3.3.0'
     compile 'com.google.code.gson:gson:2.8.2'
     compile 'com.squareup.picasso:picasso:2.5.2'
@@ -21,12 +23,12 @@ android {
     testOptions {
         unitTests.returnDefaultValues = true
     }
-
     defaultConfig {
-        minSdkVersion 23
+        minSdkVersion 22
         targetSdkVersion 26
     }
-
     compileSdkVersion 26       // NOTE: update build-tools-* in .travis.yml
     buildToolsVersion '26.0.2' // NOTE: update build-tools-* in .travis.yml
+    productFlavors {
+    }
 }
